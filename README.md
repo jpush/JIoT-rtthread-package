@@ -12,7 +12,7 @@
 | docs            | 文档目录 |
 | samples  | 示例文件目录 |
 | LICENSE    | 许可证文件 |
-| README.md | r软件包使用说明 |
+| README.md | 软件包使用说明 |
 | SConscript | RT-Thread 默认的构建脚本 |
 
 ### 1.2 许可证
