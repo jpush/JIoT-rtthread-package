@@ -24,7 +24,7 @@ path += [cwd + '/jiot-c-sdk/platform/os/rt-thread']
 path += [cwd + '/jiot-c-sdk/src/mqtt/MQTTPacket/src']
 path += [cwd + '/jiot-c-sdk/public/net/tcp']
 
-if GetDepend(['RT_USING_JIOT_EXAMPLES']):
+if GetDepend(['PKG_USING_JIOT_EXAMPLES']):
 	src += Glob('samples/*.c')
 	
 if GetDepend(['JIOT_SSL']):
