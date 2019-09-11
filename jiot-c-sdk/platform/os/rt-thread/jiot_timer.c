@@ -74,7 +74,7 @@ UINT64 jiot_timer_now_ms()
     gettimeofday(&now, NULL);
     return now.tv_sec*1000 + now.tv_usec/1000 ;*/
 #if (RT_TICK_PER_SECOND == 1000)
-    return (UINT32)rt_tick_get();
+    return (UINT64)rt_tick_get();
 #else
 
     uint64_t tick;
@@ -83,6 +83,7 @@ UINT64 jiot_timer_now_ms()
     tick = tick * 1000;
 
     return (tick + RT_TICK_PER_SECOND - 1)/RT_TICK_PER_SECOND;
+#endif
 }
 
 UINT32 jiot_timer_now()
@@ -100,6 +101,7 @@ UINT32 jiot_timer_now()
     tick = tick * 1000;
 
     return (tick + RT_TICK_PER_SECOND - 1)/RT_TICK_PER_SECOND / 1000;
+#endif
 }
 
 void jiot_timer_s2str(UINT32 second,char* buf )
