@@ -7,7 +7,6 @@
 #ifndef JIOT_TIMER_H
 #define JIOT_TIMER_H
 
-#include <time.h>
 #include <sys/time.h>
 #include "jiot_err.h"
 #include "jiot_std.h"
