@@ -25,7 +25,7 @@ MIT License 协议许可。
 
 ## 2 获取软件包
 
-使用 `jiot-c-sdl` 软件包使用 menuconfig 命令打开 Env 配置界面，在 `RT-Thread online packages → IoT - internet of things → IoT Cloud` 中选择 jiot-c-sdk 软件包，操作界面如下图所示：
+使用 `jiot-c-sdk` 软件包使用 menuconfig 命令打开 Env 配置界面，在 `RT-Thread online packages → IoT - internet of things → IoT Cloud` 中选择 jiot-c-sdk 软件包，操作界面如下图所示：
 
 ![选中 jiot-c-sdk 软件包](https://github.com/jpush/JIoT-rtthread-package/blob/master/docs/figures/select_jiot_c_sdk.png?raw=true)
 
