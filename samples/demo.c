@@ -467,7 +467,7 @@ static int start_demo_test()
 }
 
 
-#ifdef PKG_USING_JIOT-C-SDK
+#ifdef RT_USING_JIOT_C_SDK
 #include <finsh.h>
 
 MSH_CMD_EXPORT_ALIAS(start_demo_test, start_demo_test,Example: start_demo_test);
