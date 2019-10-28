@@ -70,16 +70,38 @@ void jiot_timer_countdown(S_JIOT_TIME_TYPE* timer,UINT32 millisecond)
 
 UINT64 jiot_timer_now_ms()
 {
-    struct timeval now;
+    /*struct timeval now;
     gettimeofday(&now, NULL);
-    return now.tv_sec*1000 + now.tv_usec/1000 ;
+    return now.tv_sec*1000 + now.tv_usec/1000 ;*/
+#if (RT_TICK_PER_SECOND == 1000)
+    return (UINT64)rt_tick_get();
+#else
+
+    uint64_t tick;
+    tick = rt_tick_get();
+
+    tick = tick * 1000;
+
+    return (tick + RT_TICK_PER_SECOND - 1)/RT_TICK_PER_SECOND;
+#endif
 }
 
 UINT32 jiot_timer_now()
 {
-    struct timeval now;
+    /*struct timeval now;
     gettimeofday(&now, NULL);
-    return now.tv_sec;
+    return now.tv_sec;*/
+#if (RT_TICK_PER_SECOND == 1000)
+    return (UINT32)(rt_tick_get() / 1000);
+#else
+
+    uint64_t tick;
+    tick = rt_tick_get();
+
+    tick = tick * 1000;
+
+    return (tick + RT_TICK_PER_SECOND - 1)/RT_TICK_PER_SECOND / 1000;
+#endif
 }
 
 void jiot_timer_s2str(UINT32 second,char* buf )
