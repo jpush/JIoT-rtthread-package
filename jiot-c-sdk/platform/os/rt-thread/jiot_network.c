@@ -1,7 +1,7 @@
 
 
 #include "jiot_network.h"
-
+#include <sys/ioctl.h>
 
 INT32 jiot_network_send(INT32 sockFd, void *buf, INT32 nbytes)
 {
